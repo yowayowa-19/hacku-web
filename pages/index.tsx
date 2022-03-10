@@ -5,7 +5,6 @@ import Promotion from "../components/03Promotion";
 import Usage from "../components/04Usage";
 import Question from "../components/05Question";
 import Footer from "../components/06Footer";
-import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   // TODO スクロール位置が100vh以上から100vh未満になったら、スクロール位置をtopにする
