@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Question = () => {
   return (
     <>
@@ -33,8 +35,7 @@ const QuestionList = () => {
         return (
           <>
             {/* accordion */}
-            <p key={index}>{item.question}</p>
-            <p>{item.answer}</p>
+            <Accordion question={item.question} answer={item.answer} />
           </>
         );
       })}
@@ -43,3 +44,72 @@ const QuestionList = () => {
     </>
   );
 };
+
+const Accordion = ({ question, answer }: { question: string, answer: string }) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <div className="container">
+        <button onClick={() => setIsOpen(!isOpen)} className="innnerContainer">
+          <div className="mark">Q. </div>
+          <div className="content">{question}</div>
+          <div className="plusMinus">{isOpen ? "-" : "+"}</div>
+        </button>
+        {isOpen &&
+          <>
+            <div className="mark">A.</div>
+            <div className="content">{answer}</div>
+          </>
+        }
+
+      </div>
+      <style jsx>{`
+        button{
+          border: none;
+          background-color: #fff;
+          cursor: pointer
+          outline: none;
+          padding: 0px;
+          appearance: none;
+        }
+        .container{
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          width: 1200px;
+        }
+
+        .innnerContainer{
+          display: flex;
+          flex-direction: row;
+          width: 1200px;
+        }
+
+        .mark{
+          width: 100px;
+          height: 100px;
+          text-align: center;
+          vertical-align: middle;
+          font-size: 28px;
+        }
+
+        .content{
+          width: 1000px;
+          height: 100px;
+          text-align: left;
+          font-size: 28px;
+        }
+
+        .plusMinus{
+          width: 100px;
+          height: 100px;
+          text-align: center;
+          
+          font-size: 40px;
+        }
+        `}</style>
+    </>
+  )
+}
