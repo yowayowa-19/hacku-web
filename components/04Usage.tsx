@@ -1,11 +1,18 @@
 const Usage = () => {
   return (
     <>
-      <h2>使い方</h2>
-      <Step />
-      <h3>世界を越えよう．あなたのあくびで</h3>
-      <button>yawningをはじめる</button>
-      <style jsx>{``}</style>
+      <div className="area">
+        <h2>使い方</h2>
+        <Step />
+        <h3>世界を越えよう．あなたのあくびで</h3>
+        <button>yawningをはじめる</button>
+      </div>
+      <style jsx>{`
+        .area {
+          mergin-top: 100vh;
+          height: 150vh;
+        }
+      `}</style>
     </>
   );
 };
