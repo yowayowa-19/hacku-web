@@ -253,7 +253,6 @@ const RightBox = (
       .rightImage{
         grid-row: 1/4;
         grid-column: 3;
-        background: #f88;
       }
 
       .rightTitle{

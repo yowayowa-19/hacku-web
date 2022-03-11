@@ -85,7 +85,7 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
           </div>
         }
 
-        <Transition in={!isOpen} timeout={500}>
+        {/* <Transition in={!isOpen} timeout={500}>
 
           <div className={classNames('underside', 'easing2')}>
             <div className="mark">A.</div>
@@ -93,7 +93,7 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
             <div className="plusMinus" />
           </div>
         </Transition>
-
+ */}
 
 
 
