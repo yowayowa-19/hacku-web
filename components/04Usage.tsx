@@ -14,7 +14,7 @@ const Usage = () => {
         .usage {
           scroll-snap-align: start;
           text-align: center;
-          margin: 0 auto;
+          
         }
       `}</style>
     </>
@@ -50,7 +50,7 @@ const content = [
 const Step = () => {
   return (
     <>
-      <div className="wrapper">
+      {/* <div className="wrapper"> */}
         {content.map((item, index) => {
           if (index % 2 === 0) {
             return (
@@ -62,12 +62,14 @@ const Step = () => {
             );
           }
         })}
-      </div>
+      {/* </div> */}
       <style jsx>{`
+        /*
         .wrapper{
           margin-left: auto;
           margin-right: auto;
         }
+        */
         `}</style>
     </>
   );
@@ -102,29 +104,29 @@ const LeftBox = (
       .leftContainer{
         
         display: grid;
-        grid-template-rows: 100px auto auto;
-        grid-template-columns: 333px 750px;
+        grid-template-rows: 100px 100px auto;
+        grid-template-columns:1fr 333px 750px 1fr;
       }
 
       .leftImage{
         grid-row: 1/4;
-        grid-column: 1;
+        grid-column: 2;
         background: #f88;
       }
 
       .leftTitle{
         grid-row: 1;
-        grid-column: 2;
+        grid-column: 3;
       }
 
       .leftDescription{
         grid-row: 2;
-        grid-column: 2;
+        grid-column: 3;
       }
 
       .leftSubDesciption{
         grid-row: 3;
-        grid-column: 2;
+        grid-column: 3;
       }
       `}</style>
     </>
@@ -160,28 +162,28 @@ const RightBox = (
       .rightContainer{
         display: grid;
         grid-template-rows: 100px auto auto;
-        grid-template-columns: 750px 333px;
+        grid-template-columns: 1fr 750px 333px 1fr;
       }
 
       .rightImage{
         grid-row: 1/4;
-        grid-column: 2;
+        grid-column: 3;
         background: #f88;
       }
 
       .rightTitle{
         grid-row: 1;
-        grid-column: 1;
+        grid-column: 2;
       }
 
       .rightDescription{
         grid-row: 2;
-        grid-column: 1;
+        grid-column: 2;
       }
 
       .rightSubDesciption{
         grid-row: 3;
-        grid-column: 1;
+        grid-column: 2;
       }
       `}</style>
     </>

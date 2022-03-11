@@ -5,7 +5,14 @@ const Question = () => {
     <>
       <h2>よくある質問</h2>
       <QuestionList />
-      <style jsx>{``}</style>
+      <style jsx>{`
+        h2 {
+          text-align: center;
+          font: normal normal normal 40px/68px Hiragino Sans;
+          color: #4D4D4D;
+          margin-top: 200px;
+        }
+        `}</style>
     </>
   );
 };
@@ -79,6 +86,8 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
           flex-wrap: wrap;
           flex-direction: row;
           width: 1200px;
+
+          margin: 0 auto;
         }
 
         .innnerContainer{
