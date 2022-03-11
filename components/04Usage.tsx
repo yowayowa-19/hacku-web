@@ -55,21 +55,21 @@ const content = [
     description: "あくびが出そうになったらボタンを押しましょう",
     sub_description:
       "ボタンを押すことであなたの位置情報がサーバーに送信されます。",
-    image_ref: "/Google_Pixel_5_Sorta_Sage.png",
+    image_ref: "/yawning4.png",
   },
   {
     title: "コンボを繋げる",
     description: "あくびがうつるとコンボが繋がります",
     sub_description:
       "あくびをしてから5秒以内にあくびをした人が居るとコンボが繋がります。あくびマップにピンが刺さり、あくびが繋がり連鎖します。",
-    image_ref: "/Google_Pixel_5_Sorta_Sage.png",
+    image_ref: "/yawning6.png",
   },
   {
     title: "登ろう。あくびの高みへ",
     description: "コンボ数・あくび距離をスコア化",
     sub_description:
       "あなたのあくびをスコア化することで、あくびの高みを目指せます。\nコンボを繋ぐためには？距離を伸ばすためには？\nシンプルで奥深い。あくび世界の探求者になりましょう。",
-    image_ref: "/Google_Pixel_5_Sorta_Sage.png",
+    image_ref: "/yawning5.png",
   },
 ];
 
@@ -118,7 +118,7 @@ const LeftBox = (
           <Image
             src={item.image_ref}
             width={333}
-            height={616}
+            height={666}
             alt="some picture"
           />
         </div>
@@ -157,7 +157,6 @@ const LeftBox = (
       .leftImage{
         grid-row: 1/4;
         grid-column: 2;
-        background: #f88;
       }
 
       .leftContent{
