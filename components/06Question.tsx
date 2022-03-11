@@ -3,14 +3,21 @@ import { useState } from "react";
 const Question = () => {
   return (
     <>
-      <h2>よくある質問</h2>
-      <QuestionList />
+      <div className="wrapper">
+        <h2>よくある質問</h2>
+        <QuestionList />
+      </div>
       <style jsx>{`
         h2 {
           text-align: center;
           font: normal normal normal 40px/68px Hiragino Sans;
           color: #4D4D4D;
           margin-top: 200px;
+          margin-bottom: 100px;
+        }
+
+        .wrapper{
+          min-height: 100vh;
         }
         `}</style>
     </>
@@ -59,16 +66,19 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
   return (
     <>
       <div className="container">
-        <button onClick={() => setIsOpen(!isOpen)} className="innnerContainer">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className={`upside ${isOpen ? 'close' : 'open'}`}>
           <div className="mark">Q. </div>
           <div className="content">{question}</div>
           <div className="plusMinus">{isOpen ? "-" : "+"}</div>
         </button>
         {isOpen &&
-          <>
+          <div className="underside">
             <div className="mark">A.</div>
             <div className="content">{answer}</div>
-          </>
+            <div className="plusMinus"/>
+          </div>
         }
 
       </div>
@@ -79,37 +89,85 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
           flex-wrap: wrap;
           flex-direction: row;
           width: 1200px;
-
           margin: 0 auto;
+          margin-top: 32px;
         }
 
-        .innnerContainer{
+        .open{
+          background-color: #F5F5F5;
+          border-radius: 16px;
+        }
+
+        .close{
+          background: #697BFF39;
+          border-radius: 16px 16px 0 0;
+        }
+
+        .upside{
           display: flex;
           flex-direction: row;
+          
+          height: 120px;
           width: 1200px;
+          
+          align-items: center;
+        }
+
+        .underside {
+          display: flex;
+          flex-direction: row;
+          min-height: 120px;
+          width: 1200px;
+          background-color: #F5F5F5;
+          border-radius: 0 0 16px 16px;
+
+          
+          justify-content: center;
         }
 
         .mark{
+          font: normal normal normal 28px/48px Hiragino Sans;
+          color: #4D4D4D;
+
           width: 100px;
           height: 100px;
+          
           text-align: center;
-          vertical-align: middle;
+          
           font-size: 28px;
+
+          justify-self: right;
+
+          padding-top: 50px;
+          margin-bottom: 50px;
         }
 
         .content{
           width: 1000px;
-          height: 100px;
+          min-height: 100px;
           text-align: left;
-          font-size: 28px;
+
+          padding-top: 50px;
+          margin-bottom: 50px;
+
+          font: normal normal normal 28px/48px Hiragino Sans;
+          color: #4D4D4D;
         }
 
         .plusMinus{
+          font: normal normal normal 48px/48px Hiragino Sans;
+          color: #4D4D4D;
+
           width: 100px;
           height: 100px;
+          
           text-align: center;
           
-          font-size: 40px;
+
+          justify-self: right;
+
+          padding-top: 50px;
+          margin-bottom: 50px;;
         }
         `}</style>
     </>
