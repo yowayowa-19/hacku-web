@@ -22,6 +22,7 @@ const Promotion = () => {
           font: normal normal normal 56px/80px Noto Sans JP;
           color: #697BFF;
           padding-top: 150px;
+          margin-bottom: 80px;
         }
 
         .youtube{

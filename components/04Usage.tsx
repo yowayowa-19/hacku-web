@@ -27,7 +27,7 @@ const Usage = () => {
         h3{
           font: normal normal normal 48px/82px Noto Sans JP;
           color: #4D4D4D;
-          margin-bottom: 20px;
+          margin-bottom: 40px;
         }
 
         button{
