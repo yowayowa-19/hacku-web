@@ -3,6 +3,7 @@ import Top from "../components/01Top";
 import About from "../components/02About";
 import Promotion from "../components/03Promotion";
 import Usage from "../components/04Usage";
+import Hardware from "../components/05Hardware";
 import Question from "../components/06Question";
 import Footer from "../components/07Footer";
 
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
           <Promotion />
         </div>
         <Usage />
+        <Hardware/>
         <Question />
         <Footer />
       </div>
