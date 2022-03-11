@@ -34,11 +34,11 @@ const content = [
   },
   {
     question: "「位置情報が取得できません」と表示されます",
-    answer: "some answer 2",
+    answer: "設定から位置情報の取得を許可して下さい。",
   },
   {
     question: "あくびが止まりません",
-    answer: "some answer 3",
+    answer: "あくびは100回連続で出してしまっても大丈夫らしいので頑張って下さい。",
   },
 ];
 
