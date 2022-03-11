@@ -17,7 +17,7 @@ const Top = (): JSX.Element => {
             </div>
             <h2 className="item3">あくびは世界を超える</h2>
           </div>
-          <div className="item4">メインビジュアル</div>
+          <div className="item4"></div>
         </div>
       </div>
       <style jsx>{`
@@ -28,7 +28,13 @@ const Top = (): JSX.Element => {
         }
 
         .bg{
-          background: #f2f2f2
+          background: #f2f2f2;
+          background-image:
+            url('/main_visual.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: right;
+          background-attachment: local;
         }
 
         .headerLogo{
