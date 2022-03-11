@@ -17,7 +17,7 @@ const Question = () => {
         }
 
         .wrapper{
-          min-height: 100vh;
+          min-height: 150vh;
         }
         `}</style>
     </>
@@ -77,7 +77,7 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
           <div className="underside">
             <div className="mark">A.</div>
             <div className="content">{answer}</div>
-            <div className="plusMinus"/>
+            <div className="plusMinus" />
           </div>
         }
 
@@ -91,7 +91,9 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
           width: 1200px;
           margin: 0 auto;
           margin-top: 32px;
+          
         }
+
 
         .open{
           background-color: #F5F5F5;
