@@ -1,4 +1,7 @@
+import classNames from "classnames";
 import { useState } from "react";
+import { Transition } from "react-transition-group";
+
 
 const Question = () => {
   return (
@@ -73,6 +76,7 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
           <div className="content">{question}</div>
           <div className="plusMinus">{isOpen ? "-" : "+"}</div>
         </button>
+
         {isOpen &&
           <div className="underside">
             <div className="mark">A.</div>
@@ -81,9 +85,22 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
           </div>
         }
 
+        <Transition in={!isOpen} timeout={500}>
+
+          <div className={classNames('underside', 'easing2')}>
+            <div className="mark">A.</div>
+            <div className="content">{answer}</div>
+            <div className="plusMinus" />
+          </div>
+        </Transition>
+
+
+
+
       </div>
       <style jsx>{`
 
+      .easing2 {transition-timing-function: cubic-bezier(1,0,0,1)}
         .container{
           display: flex;
           flex-wrap: wrap;
@@ -92,6 +109,9 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
           margin: 0 auto;
           margin-top: 32px;
           
+          transition: all 300ms 0s ease;
+
+          overflow: hidden;
         }
 
 
@@ -122,9 +142,10 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
           width: 1200px;
           background-color: #F5F5F5;
           border-radius: 0 0 16px 16px;
-
-          
           justify-content: center;
+
+          overflow: hidden;
+          transition: 0.2s ease-in-out;
         }
 
         .mark{
