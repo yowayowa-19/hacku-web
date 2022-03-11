@@ -1,4 +1,3 @@
-import Google_Pixel from "../public/Google_Pixel_5_Sorta_Sage.png";
 import Image from "next/image";
 
 const Usage = () => {
@@ -7,14 +6,41 @@ const Usage = () => {
       <div className="usage">
         <h2>使い方</h2>
         <Step />
-        <h3>世界を越えよう．あなたのあくびで</h3>
+        <h3>世界を越えよう。あなたのあくびで</h3>
         <button>yawningをはじめる</button>
       </div>
       <style jsx>{`
         .usage {
           scroll-snap-align: start;
           text-align: center;
-          
+          background: #F2F2F2;
+        }
+
+        h2 {
+          padding-top: 185px;
+          margin-bottom: 144px;
+          font: normal normal bold 60px/72px Helvetica;
+          color: #697BFF;
+          text-align: center;
+        }
+
+        h3{
+          font: normal normal normal 48px/82px Hiragino Sans;
+          color: #4D4D4D;
+          margin-bottom: 20px;
+        }
+
+        button{
+          width: 863px;
+          height: 131px;
+          background: #697BFF;
+          border-radius: 66px;
+
+          font: normal normal normal 38px/65px Hiragino Sans;
+          letter-spacing: 3.04px;
+          color: #FFFFFF;
+
+          margin-bottom: 200px;
         }
       `}</style>
     </>
@@ -42,7 +68,7 @@ const content = [
     title: "登ろう。あくびの高みへ",
     description: "コンボ数・あくび距離をスコア化",
     sub_description:
-      "あなたのあくびをスコア化することで、あくびの高みを目指せます。 コンボを繋ぐためには？距離を伸ばすためには？ シンプルで奥深い。あくび世界の探求者になりましょう。",
+      "あなたのあくびをスコア化することで、あくびの高みを目指せます。\nコンボを繋ぐためには？距離を伸ばすためには？\nシンプルで奥深い。あくび世界の探求者になりましょう。",
     image_ref: "/Google_Pixel_5_Sorta_Sage.png",
   },
 ];
@@ -51,17 +77,17 @@ const Step = () => {
   return (
     <>
       {/* <div className="wrapper"> */}
-        {content.map((item, index) => {
-          if (index % 2 === 0) {
-            return (
-              <LeftBox item={item} index={index}></LeftBox>
-            )
-          } else {
-            return (
-              <RightBox item={item} index={index}></RightBox>
-            );
-          }
-        })}
+      {content.map((item, index) => {
+        if (index % 2 === 0) {
+          return (
+            <LeftBox item={item} index={index}></LeftBox>
+          )
+        } else {
+          return (
+            <RightBox item={item} index={index}></RightBox>
+          );
+        }
+      })}
       {/* </div> */}
       <style jsx>{`
         /*
@@ -96,16 +122,36 @@ const LeftBox = (
             alt="some picture"
           />
         </div>
-        <h3 className="leftTitle">{item.title}</h3>
-        <p className="leftDescription">{item.description}</p>
-        <p className="leftSubDesciption">{item.sub_description}</p>
+        <div className="leftContent">
+          <h3 className="leftTitle">
+            <div className="circle">{index + 1}</div>{item.title}
+          </h3>
+          <p className="leftDescription">{item.description}</p>
+          <p className="leftSubDesciption">{item.sub_description}</p>
+        </div>
       </div>
       <style jsx>{`
+
+      .circle{
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #fff;
+        text-align: center;
+        line-height: 100px;
+        margin-right: 20px;
+      }
+
       .leftContainer{
         
         display: grid;
-        grid-template-rows: 100px 100px auto;
+        grid-template-rows: 100px auto auto;
         grid-template-columns:1fr 333px 750px 1fr;
+
+        margin-bottom: 200px;
+
+        white-space: pre-wrap;
       }
 
       .leftImage{
@@ -114,19 +160,32 @@ const LeftBox = (
         background: #f88;
       }
 
-      .leftTitle{
-        grid-row: 1;
+      .leftContent{
+        grid-row: 2/4;
         grid-column: 3;
+
+        margin-left: 80px;
+        justify-self: start;
+
+      }
+
+      .leftTitle{
+        font: normal normal normal 48px/82px Hiragino Sans;
+        color: #697BFF;
+        text-align: left;
       }
 
       .leftDescription{
-        grid-row: 2;
-        grid-column: 3;
+        font: normal normal normal 28px/60px Hiragino Sans;
+        color: #4D4D4D;
+        text-align: left;
       }
 
       .leftSubDesciption{
-        grid-row: 3;
-        grid-column: 3;
+        font: normal normal normal 20px/60px Hiragino Sans;
+        color: #4D4D4D;
+        text-align: left;
+        line-height: 2rem;
       }
       `}</style>
     </>
@@ -154,15 +213,42 @@ const RightBox = (
             alt="some picture"
           />
         </div>
-        <h3 className="rightTitle">{item.title}</h3>
-        <p className="rightDescription">{item.description}</p>
-        <p className="rightSubDesciption">{item.sub_description}</p>
+        <div className="rightContent">
+          <h3 className="rightTitle">
+            <div className="circle">{index + 1}</div>{item.title}
+          </h3>
+          <p className="rightDescription">{item.description}</p>
+          <p className="rightSubDesciption">{item.sub_description}</p>
+        </div>
       </div>
       <style jsx>{`
       .rightContainer{
         display: grid;
         grid-template-rows: 100px auto auto;
         grid-template-columns: 1fr 750px 333px 1fr;
+
+        margin-bottom: 200px;
+
+        white-space: pre-wrap;
+      }
+
+      .circle{
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #fff;
+        text-align: center;
+        line-height: 100px;
+        margin-right: 20px;
+      }
+
+      .rightContent{
+        grid-row: 2/4;
+        grid-column: 2;
+
+        margin-left: 80px;
+        justify-self: start;
       }
 
       .rightImage{
@@ -172,18 +258,22 @@ const RightBox = (
       }
 
       .rightTitle{
-        grid-row: 1;
-        grid-column: 2;
+        font: normal normal normal 48px/82px Hiragino Sans;
+        color: #697BFF;
+        text-align: left;
       }
 
       .rightDescription{
-        grid-row: 2;
-        grid-column: 2;
+        font: normal normal normal 28px/60px Hiragino Sans;
+        color: #4D4D4D;
+        text-align: left;
       }
 
       .rightSubDesciption{
-        grid-row: 3;
-        grid-column: 2;
+        font: normal normal normal 20px/60px Hiragino Sans;
+        color: #4D4D4D;
+        text-align: left;
+        line-height: 2rem;
       }
       `}</style>
     </>

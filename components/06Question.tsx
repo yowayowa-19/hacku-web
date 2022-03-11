@@ -73,14 +73,7 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
 
       </div>
       <style jsx>{`
-        button{
-          border: none;
-          background-color: #fff;
-          cursor: pointer
-          outline: none;
-          padding: 0px;
-          appearance: none;
-        }
+
         .container{
           display: flex;
           flex-wrap: wrap;
