@@ -12,7 +12,9 @@ const Usage = () => {
       </div>
       <style jsx>{`
         .usage {
-          mergin-top: 100vh;
+          scroll-snap-align: start;
+          text-align: center;
+          margin: 0 auto;
         }
       `}</style>
     </>

@@ -24,19 +24,24 @@ const Home: NextPage = () => {
       <style jsx>{`
         .outerContainer {
           overflow-y: scroll;
-          scroll-snap-type: y mandatory;
+          scroll-snap-type: y proximity;
           height: 100vh;
         }
+
+        
+        ::-webkit-scrollbar {
+          display:none;
+        }
+        
 
         .container {
+          scroll-snap-align: start;
           overflow-y: scroll;
-          scroll-snap-type: y mandatory;
+          scroll-snap-type: y mandatory ;
           height: 100vh;
         }
 
-        ::-webkit-scrollbar {
-          display: none;
-        }
+
         .area {
           scroll-snap-align: start;
           height: max-content;

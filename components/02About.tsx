@@ -40,7 +40,7 @@ const About = (): JSX.Element => {
 
         .container{
           display: grid;
-          grid-template-columns: 50vw 50vw;
+          grid-template-columns:auto auto ;
           grid-template-rows: 200px auto;
           
           padding-top: 100px;
