@@ -19,7 +19,7 @@ const Promotion = () => {
 
         .subTitle {
           text-align: center;
-          font: normal normal normal 56px/80px Hiragino Sans;
+          font: normal normal normal 56px/80px Noto Sans JP;
           color: #697BFF;
           padding-top: 150px;
         }

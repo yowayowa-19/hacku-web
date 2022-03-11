@@ -72,7 +72,7 @@ const Top = (): JSX.Element => {
           color: #5E6EE8;
           margin-top: 15px;
           margin-left: 10px;
-          font: normal normal normal 28px/60px Source Han Sans JP;
+          font: normal normal normal 28px/60px Noto Sans JP;
         }
 
         .item4{

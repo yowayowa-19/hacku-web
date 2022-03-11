@@ -10,7 +10,7 @@ const Question = () => {
       <style jsx>{`
         h2 {
           text-align: center;
-          font: normal normal normal 40px/68px Hiragino Sans;
+          font: normal normal normal 40px/68px Noto Sans JP;
           color: #4D4D4D;
           margin-top: 200px;
           margin-bottom: 100px;
@@ -126,7 +126,7 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
         }
 
         .mark{
-          font: normal normal normal 28px/48px Hiragino Sans;
+          font: normal normal normal 28px/48px Noto Sans JP;
           color: #4D4D4D;
 
           width: 100px;
@@ -150,12 +150,12 @@ const Accordion = ({ question, answer }: { question: string, answer: string }) =
           padding-top: 50px;
           margin-bottom: 50px;
 
-          font: normal normal normal 28px/48px Hiragino Sans;
+          font: normal normal normal 28px/48px Noto Sans JP;
           color: #4D4D4D;
         }
 
         .plusMinus{
-          font: normal normal normal 48px/48px Hiragino Sans;
+          font: normal normal normal 48px/48px Noto Sans JP;
           color: #4D4D4D;
 
           width: 100px;

@@ -25,7 +25,7 @@ const Usage = () => {
         }
 
         h3{
-          font: normal normal normal 48px/82px Hiragino Sans;
+          font: normal normal normal 48px/82px Noto Sans JP;
           color: #4D4D4D;
           margin-bottom: 20px;
         }
@@ -36,7 +36,7 @@ const Usage = () => {
           background: #697BFF;
           border-radius: 66px;
 
-          font: normal normal normal 38px/65px Hiragino Sans;
+          font: normal normal normal 38px/65px Noto Sans JP;
           letter-spacing: 3.04px;
           color: #FFFFFF;
 
@@ -170,19 +170,19 @@ const LeftBox = (
       }
 
       .leftTitle{
-        font: normal normal normal 48px/82px Hiragino Sans;
+        font: normal normal normal 48px/82px Noto Sans JP;
         color: #697BFF;
         text-align: left;
       }
 
       .leftDescription{
-        font: normal normal normal 28px/60px Hiragino Sans;
+        font: normal normal normal 28px/60px Noto Sans JP;
         color: #4D4D4D;
         text-align: left;
       }
 
       .leftSubDesciption{
-        font: normal normal normal 20px/60px Hiragino Sans;
+        font: normal normal normal 20px/60px Noto Sans JP;
         color: #4D4D4D;
         text-align: left;
         line-height: 2rem;
@@ -258,19 +258,19 @@ const RightBox = (
       }
 
       .rightTitle{
-        font: normal normal normal 48px/82px Hiragino Sans;
+        font: normal normal normal 48px/82px Noto Sans JP;
         color: #697BFF;
         text-align: left;
       }
 
       .rightDescription{
-        font: normal normal normal 28px/60px Hiragino Sans;
+        font: normal normal normal 28px/60px Noto Sans JP;
         color: #4D4D4D;
         text-align: left;
       }
 
       .rightSubDesciption{
-        font: normal normal normal 20px/60px Hiragino Sans;
+        font: normal normal normal 20px/60px Noto Sans JP;
         color: #4D4D4D;
         text-align: left;
         line-height: 2rem;

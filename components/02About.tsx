@@ -34,7 +34,7 @@ const About = (): JSX.Element => {
 
         .subTitle{
           text-align: left;
-          font: normal normal normal 48px/82px Hiragino Sans;
+          font: normal normal normal 48px/82px Noto Sans JP;
           color: #697BFF;
         }
 
@@ -64,7 +64,7 @@ const About = (): JSX.Element => {
           grid-column: 2;
           
 
-          font: normal normal normal 24px/40px Hiragino Sans;
+          font: normal normal normal 24px/40px Noto Sans JP;
           color: #4D4D4D;
         }
 
