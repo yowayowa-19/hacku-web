@@ -7,7 +7,7 @@ const Usage = () => {
         <h2>使い方</h2>
         <Step />
         <h3>世界を越えよう。あなたのあくびで</h3>
-        <button>yawningをはじめる</button>
+        <button>Yawningをはじめる</button>
       </div>
       <style jsx>{`
         .usage {
