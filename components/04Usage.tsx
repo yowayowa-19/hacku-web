@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Usage = () => {
   return (
@@ -7,40 +8,52 @@ const Usage = () => {
         <h2>使い方</h2>
         <Step />
         <h3>世界を越えよう。あなたのあくびで</h3>
-        <button>Yawningをはじめる</button>
+        <button>
+          <Link
+            href={
+              "https://deploygate.com/distributions/a173659a1a55a48b41331e5152d8c12ffc437d06/passcode"
+            }
+          >
+            <a target={"_blank"}>Yawningをはじめる</a>
+          </Link>
+        </button>
       </div>
       <style jsx>{`
         .usage {
           scroll-snap-align: start;
           text-align: center;
-          background: #F2F2F2;
+          background: #f2f2f2;
         }
 
         h2 {
           padding-top: 185px;
           margin-bottom: 144px;
           font: normal normal bold 60px/72px Helvetica;
-          color: #697BFF;
+          color: #697bff;
           text-align: center;
         }
 
-        h3{
+        h3 {
           font: normal normal normal 48px/82px Noto Sans JP;
-          color: #4D4D4D;
+          color: #4d4d4d;
           margin-bottom: 40px;
         }
 
-        button{
+        button {
           width: 863px;
           height: 131px;
-          background: #697BFF;
+          background: #697bff;
           border-radius: 66px;
 
           font: normal normal normal 38px/65px Noto Sans JP;
           letter-spacing: 3.04px;
-          color: #FFFFFF;
+          color: #ffffff;
 
           margin-bottom: 200px;
+        }
+
+        button:hover {
+          background: #697bffcf;
         }
       `}</style>
     </>
@@ -79,13 +92,9 @@ const Step = () => {
       {/* <div className="wrapper"> */}
       {content.map((item, index) => {
         if (index % 2 === 0) {
-          return (
-            <LeftBox item={item} index={index}></LeftBox>
-          )
+          return <LeftBox item={item} index={index}></LeftBox>;
         } else {
-          return (
-            <RightBox item={item} index={index}></RightBox>
-          );
+          return <RightBox item={item} index={index}></RightBox>;
         }
       })}
       {/* </div> */}
@@ -96,21 +105,23 @@ const Step = () => {
           margin-right: auto;
         }
         */
-        `}</style>
+      `}</style>
     </>
   );
 };
 
-const LeftBox = (
-  { item, index }: {
-    item: {
-      title: string;
-      description: string;
-      sub_description: string;
-      image_ref: string;
-    }; index: number
-  }
-) => {
+const LeftBox = ({
+  item,
+  index,
+}: {
+  item: {
+    title: string;
+    description: string;
+    sub_description: string;
+    image_ref: string;
+  };
+  index: number;
+}) => {
   return (
     <>
       <div className="leftContainer" key={index}>
@@ -124,83 +135,83 @@ const LeftBox = (
         </div>
         <div className="leftContent">
           <h3 className="leftTitle">
-            <div className="circle">{index + 1}</div>{item.title}
+            <div className="circle">{index + 1}</div>
+            {item.title}
           </h3>
           <p className="leftDescription">{item.description}</p>
           <p className="leftSubDesciption">{item.sub_description}</p>
         </div>
       </div>
       <style jsx>{`
+        .circle {
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          background: #fff;
+          text-align: center;
+          line-height: 100px;
+          margin-right: 20px;
+        }
 
-      .circle{
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background: #fff;
-        text-align: center;
-        line-height: 100px;
-        margin-right: 20px;
-      }
+        .leftContainer {
+          display: grid;
+          grid-template-rows: 100px auto auto;
+          grid-template-columns: 1fr 333px 750px 1fr;
 
-      .leftContainer{
-        
-        display: grid;
-        grid-template-rows: 100px auto auto;
-        grid-template-columns:1fr 333px 750px 1fr;
+          margin-bottom: 200px;
 
-        margin-bottom: 200px;
+          white-space: pre-wrap;
+        }
 
-        white-space: pre-wrap;
-      }
+        .leftImage {
+          grid-row: 1/4;
+          grid-column: 2;
+        }
 
-      .leftImage{
-        grid-row: 1/4;
-        grid-column: 2;
-      }
+        .leftContent {
+          grid-row: 2/4;
+          grid-column: 3;
 
-      .leftContent{
-        grid-row: 2/4;
-        grid-column: 3;
+          margin-left: 80px;
+          justify-self: start;
+        }
 
-        margin-left: 80px;
-        justify-self: start;
+        .leftTitle {
+          font: normal normal normal 48px/82px Noto Sans JP;
+          color: #697bff;
+          text-align: left;
+        }
 
-      }
+        .leftDescription {
+          font: normal normal normal 28px/60px Noto Sans JP;
+          color: #4d4d4d;
+          text-align: left;
+        }
 
-      .leftTitle{
-        font: normal normal normal 48px/82px Noto Sans JP;
-        color: #697BFF;
-        text-align: left;
-      }
-
-      .leftDescription{
-        font: normal normal normal 28px/60px Noto Sans JP;
-        color: #4D4D4D;
-        text-align: left;
-      }
-
-      .leftSubDesciption{
-        font: normal normal normal 20px/60px Noto Sans JP;
-        color: #4D4D4D;
-        text-align: left;
-        line-height: 2rem;
-      }
+        .leftSubDesciption {
+          font: normal normal normal 20px/60px Noto Sans JP;
+          color: #4d4d4d;
+          text-align: left;
+          line-height: 2rem;
+        }
       `}</style>
     </>
   );
-}
+};
 
-const RightBox = (
-  { item, index }: {
-    item: {
-      title: string;
-      description: string;
-      sub_description: string;
-      image_ref: string;
-    }; index: number
-  }
-) => {
+const RightBox = ({
+  item,
+  index,
+}: {
+  item: {
+    title: string;
+    description: string;
+    sub_description: string;
+    image_ref: string;
+  };
+  index: number;
+}) => {
   return (
     <>
       <div className="rightContainer">
@@ -214,66 +225,67 @@ const RightBox = (
         </div>
         <div className="rightContent">
           <h3 className="rightTitle">
-            <div className="circle">{index + 1}</div>{item.title}
+            <div className="circle">{index + 1}</div>
+            {item.title}
           </h3>
           <p className="rightDescription">{item.description}</p>
           <p className="rightSubDesciption">{item.sub_description}</p>
         </div>
       </div>
       <style jsx>{`
-      .rightContainer{
-        display: grid;
-        grid-template-rows: 100px auto auto;
-        grid-template-columns: 1fr 750px 333px 1fr;
+        .rightContainer {
+          display: grid;
+          grid-template-rows: 100px auto auto;
+          grid-template-columns: 1fr 750px 333px 1fr;
 
-        margin-bottom: 200px;
+          margin-bottom: 200px;
 
-        white-space: pre-wrap;
-      }
+          white-space: pre-wrap;
+        }
 
-      .circle{
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background: #fff;
-        text-align: center;
-        line-height: 100px;
-        margin-right: 20px;
-      }
+        .circle {
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          background: #fff;
+          text-align: center;
+          line-height: 100px;
+          margin-right: 20px;
+        }
 
-      .rightContent{
-        grid-row: 2/4;
-        grid-column: 2;
+        .rightContent {
+          grid-row: 2/4;
+          grid-column: 2;
 
-        margin-left: 80px;
-        justify-self: start;
-      }
+          margin-left: 80px;
+          justify-self: start;
+        }
 
-      .rightImage{
-        grid-row: 1/4;
-        grid-column: 3;
-      }
+        .rightImage {
+          grid-row: 1/4;
+          grid-column: 3;
+        }
 
-      .rightTitle{
-        font: normal normal normal 48px/82px Noto Sans JP;
-        color: #697BFF;
-        text-align: left;
-      }
+        .rightTitle {
+          font: normal normal normal 48px/82px Noto Sans JP;
+          color: #697bff;
+          text-align: left;
+        }
 
-      .rightDescription{
-        font: normal normal normal 28px/60px Noto Sans JP;
-        color: #4D4D4D;
-        text-align: left;
-      }
+        .rightDescription {
+          font: normal normal normal 28px/60px Noto Sans JP;
+          color: #4d4d4d;
+          text-align: left;
+        }
 
-      .rightSubDesciption{
-        font: normal normal normal 20px/60px Noto Sans JP;
-        color: #4D4D4D;
-        text-align: left;
-        line-height: 2rem;
-      }
+        .rightSubDesciption {
+          font: normal normal normal 20px/60px Noto Sans JP;
+          color: #4d4d4d;
+          text-align: left;
+          line-height: 2rem;
+        }
       `}</style>
     </>
   );
-}
+};
