@@ -1,23 +1,24 @@
 const Hardware = () => {
   return (
     <>
-        <div className="container bg">
-          <h2 className="subTitle">
-            あくびの世界を
-            <br />
-            追求する究極の
-            <br />
-            デバイス
-          </h2>
-          <div className="image"></div>
-        </div>
-        {content.map((item, index) => (
-          <>
-            <h3 className="sectionTitle">{item.section}</h3>
-            <p className="sectionText">{item.text}</p>
-          </>
-        ))}
-        <h3 className="sectionTitle">仕様</h3>
+      <div className="container bg">
+        <h2 className="subTitle">
+          あくびの世界を
+          <br />
+          追求する究極の
+          <br />
+          デバイス
+        </h2>
+        <div className="image"></div>
+      </div>
+      {content.map((item, index) => (
+        <>
+          <h3 className="sectionTitle">{item.section}</h3>
+          <p className="sectionText">{item.text}</p>
+        </>
+      ))}
+      <h3 className="sectionTitle">仕様</h3>
+      <SpecTable />
       <style jsx>{`
         .bg {
           margin-top: 200px;
@@ -68,4 +69,46 @@ const content = [
     section: "2. CO2センサーによってあくび環境を計測",
     text: "Yawning ProではCO2センサーを搭載、計測することで、あなたの環境があくびに最適かをどうかをあくび指数として確認することができます。あくび指数はスマートフォンアプリから確認することができます。こちらの機能を使えばよりあくびのしやすい環境へいくことができるでしょう。",
   },
+];
+
+const SpecTable = () => {
+  return (
+    <>
+      <table>
+        <tbody>
+          {spec.map((item, index) => (
+            <tr key={index}>
+              <td className="first">{item.title}</td>
+              <td>{item.value}</td>
+            </tr>
+          ))}
+          <tr>
+            <td colSpan={2}>CO2センサー内蔵</td>
+          </tr>
+        </tbody>
+      </table>
+      <style jsx>
+        {`
+          table {
+            width: 1200px;
+            margin: 0 auto 0 auto;
+          }
+          .first {
+            width: 200px;
+          }
+
+          td {
+            font: normal normal normal 28px/60px Noto Sans JP;
+            color: #4d4d4d;
+          }
+        `}
+      </style>
+    </>
+  );
+};
+
+const spec = [
+  { title: "寸法", value: "7.1×3.8×3.4 [cm]" },
+  { title: "重さ", value: "63 [g]" },
+  { title: "電圧", value: "5 [V]" },
 ];
