@@ -12,17 +12,17 @@ const Home: NextPage = () => {
   // TODO 内側と外側のスクロールを同期させたほうが楽そう
   return (
     <>
-      <div className="outerContainer">
-        <div className="container">
-          <Top />
-          <About />
-          <Promotion />
-        </div>
-        <Usage />
-        <Hardware/>
-        <Question />
-        <Footer />
-      </div>
+      {/* <div className="outerContainer">
+        <div className="container"> */}
+      <Top />
+      <About />
+      <Promotion />
+      {/* </div> */}
+      <Usage />
+      <Hardware />
+      <Question />
+      <Footer />
+      {/* </div> */}
       <style jsx>{`
         .outerContainer {
           overflow-y: scroll;
@@ -30,19 +30,16 @@ const Home: NextPage = () => {
           height: 100vh;
         }
 
-        
         ::-webkit-scrollbar {
-          display:none;
+          display: none;
         }
-        
 
         .container {
           scroll-snap-align: start;
           overflow-y: scroll;
-          scroll-snap-type: y mandatory ;
+          scroll-snap-type: y mandatory;
           height: 100vh;
         }
-
 
         .area {
           scroll-snap-align: start;
