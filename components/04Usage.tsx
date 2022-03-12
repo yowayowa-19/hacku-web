@@ -8,15 +8,15 @@ const Usage = () => {
         <h2>使い方</h2>
         <Step />
         <h3>世界を越えよう。あなたのあくびで</h3>
-        <button>
-          <Link
-            href={
-              "https://deploygate.com/distributions/a173659a1a55a48b41331e5152d8c12ffc437d06/passcode"
-            }
-          >
-            <a target={"_blank"}>Yawningをはじめる</a>
-          </Link>
-        </button>
+        <Link
+          href={
+            "https://deploygate.com/distributions/a173659a1a55a48b41331e5152d8c12ffc437d06/passcode"
+          }
+        >
+          <a target={"_blank"}>
+            <button>Yawningをはじめる</button>
+          </a>
+        </Link>
       </div>
       <style jsx>{`
         .usage {
