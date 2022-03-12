@@ -8,7 +8,7 @@ const Promotion = () => {
           起こそう、あくびのニューウェーブ <br />
           きっとできる。あなたのあくびで</h2>
         <div className="youtube">
-          <YouTube videoId="S1WZL3G5jZM" />
+          <YouTube videoId="82AavTWFkN0" />
         </div>
       </div>
       <style jsx>{`

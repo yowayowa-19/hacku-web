@@ -41,7 +41,7 @@ const About = (): JSX.Element => {
         .container{
           display: grid;
           grid-template-columns:auto auto ;
-          grid-template-rows: 200px auto;
+          grid-template-rows: 150px auto;
           
           padding-top: 200px;
         }
