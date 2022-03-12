@@ -59,17 +59,21 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <meta
+          {/* <meta
             property="description"
             content="Learn how to build a personal website using Next.js"
-          />
+          /> */}
           {/* <meta
             property="og:image"
             content={`https://og-image.vercel.app/${encodeURI(
               "yarwning"
             )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
           /> */}
-          <meta property="og:title" content={"yawning"} key="title" />
+          <meta
+            property="og:title"
+            content={"「あくびは世界を越える」Yawning"}
+            key="title"
+          />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
         <body>

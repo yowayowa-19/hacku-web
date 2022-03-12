@@ -43,7 +43,7 @@ const About = (): JSX.Element => {
           grid-template-columns:auto auto ;
           grid-template-rows: 200px auto;
           
-          padding-top: 100px;
+          padding-top: 200px;
         }
 
         .item1{

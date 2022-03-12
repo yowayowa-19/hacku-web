@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import Top from "../components/01Top";
 import About from "../components/02About";
 import Promotion from "../components/03Promotion";
@@ -12,6 +13,9 @@ const Home: NextPage = () => {
   // TODO 内側と外側のスクロールを同期させたほうが楽そう
   return (
     <>
+      <Head>
+        <title>「あくびは世界を越える」Yawning</title>
+      </Head>
       {/* <div className="outerContainer">
         <div className="container"> */}
       <Top />
